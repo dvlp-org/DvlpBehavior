@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/top_coord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/new_home_top_bg"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+                <!-- 水平按钮 开始-->
+                <include
+                    layout="@layout/new_home_linear_zfb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="pin" />
+                <!-- 水平按钮 结束-->
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="right"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <include
+                        layout="@layout/new_toolbar_head1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+            <!-- 悬浮标签  开始-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:nestedScrollingEnabled="false">
+
+                <View
+                    android:id="@+id/view_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/new_home_content_bg"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp">
+
+                            <TextView
+                                android:id="@+id/tv_refresh_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FFA8B4C4"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="17dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_tab_left"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="直销银行理财"
+                                    android:textColor="#222222"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_tab_right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="银行存款"
+                                    android:textColor="#485465"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8.6dp">
+
+                                <TextView
+
+                                    android:id="@+id/tv_bank_src1"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#A8B4C4"
+                                    android:textSize="12sp" />
+                                <TextView
+
+                                    android:id="@+id/tv_bank_src2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#A8B4C4"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_cai"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:id="@+id/iv_cai"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/icon_new_home_cai" />
+
+                            <TextView
+                                android:id="@+id/tv_icon_src"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="财"
+                                android:textColor="#508CEE" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#F5F5F5" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white">
+
+                        <!--<com.bs.finance.widgets.home.NewHomeTabHeaderView-->
+                            <!--android:id="@+id/home_tab_view_header"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="30dp"-->
+                            <!--android:layout_marginRight="25dp"-->
+                            <!--android:background="#ffffff"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:visibility="gone" />-->
+
+                        <!--<com.bs.finance.widgets.HomeSlidingTabLayout-->
+                            <!--android:id="@+id/slidingTablayout"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="7.5dp"-->
+                            <!--android:layout_marginRight="45dp"-->
+                            <!--android:background="@android:color/white"-->
+                            <!--android:visibility="gone"-->
+                            <!--app:tl_divider_color="@android:color/white"-->
+                            <!--app:tl_divider_padding="0dp"-->
+                            <!--app:tl_divider_width="0dp"-->
+                            <!--app:tl_indicator_color="@android:color/white"-->
+                            <!--app:tl_indicator_height="0dp"-->
+                            <!--app:tl_indicator_width_equal_title="false"-->
+                            <!--app:tl_tab_padding="6.5dp"-->
+                            <!--app:tl_tab_space_equal="false"-->
+                            <!--app:tl_textSelectColor="#508CEE"-->
+                            <!--app:tl_textUnselectColor="#999999"-->
+                            <!--app:tl_underline_color="@android:color/white"-->
+                            <!--app:tl_underline_height="0dp" />-->
+
+                        <LinearLayout
+                            android:id="@+id/linear_version"
+                            android:layout_width="57dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:background="@drawable/new_home_version_bg"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_version"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_old_version" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- 内容滚动 开始-->
+        <!--<include layout="@layout/new_home_content" />-->
+        <!-- 内容滚动 结束-->
+        <!-- http://blog.csdn.net/chen_xi_hao/article/details/74347023
+        https://www.cnblogs.com/soaringEveryday/p/4806668.html-->
+    </android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>
