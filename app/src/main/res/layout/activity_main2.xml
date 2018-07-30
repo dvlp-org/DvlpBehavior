@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#ffffff"
     android:fitsSystemWindows="true">
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -234,7 +234,7 @@
 
         </android.support.design.widget.AppBarLayout>
         <!-- 内容滚动 开始-->
-        <!--<include layout="@layout/new_home_content" />-->
+        <include layout="@layout/includ_new_home_content" />
         <!-- 内容滚动 结束-->
         <!-- http://blog.csdn.net/chen_xi_hao/article/details/74347023
         https://www.cnblogs.com/soaringEveryday/p/4806668.html-->

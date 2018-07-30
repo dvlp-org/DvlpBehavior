@@ -71,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        lp.setMargins(0, BarUtils.getStatusBarHeight(this), 0, 0);
+//        lp.setMargins(0, BarUtils.getStatusBarHeight(this), 0, 0);
+        lp.setMargins(0, 0, 0, 0);
+
         top_coord.setLayoutParams(lp);
         // 初始化
         initScroll();
